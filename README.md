@@ -116,4 +116,7 @@ python amazon.py -k jersey -p 2 -o ~/Desktop/products.json -d images
 ### Version
 0.1.0
 
-
+### More Info
+* [twitter](https://twitter.com/xaviercolomer)
+* [linkedin](https://es.linkedin.com/in/xaviercolomer)
+* [blog](http://xavicolomer.com)
