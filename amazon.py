@@ -11,6 +11,7 @@ import os
 import settings
 
 
+# Create a folder and optionally delete the old one
 def createFolder(path, overwrite=True):
     if os.path.exists(path):
         if (overwrite):
@@ -21,6 +22,7 @@ def createFolder(path, overwrite=True):
         os.makedirs(path)
 
 
+# Download an image to a selected path
 def downloadImage(folder_path, image_name, url, overwrite=True):
     createFolder(folder_path, overwrite)
 
@@ -30,6 +32,7 @@ def downloadImage(folder_path, image_name, url, overwrite=True):
     f.close()
 
 
+# Go to the detail view of the project and harvest more information
 def getProductDetail(aid, link, path):
     query = pq(url=link)
     details = {}
@@ -77,6 +80,7 @@ def getProductDetail(aid, link, path):
     return details
 
 
+# Go to the list view and iterate through the product list
 def getProductInfo(keyword, page, download):
     products = []
 

@@ -1,6 +1,14 @@
-# Amazon product JSON list 
+# Amazon product list generator (JSON & Images)
 
-A python script that generates a list of articles based on a keyword, and optionally can download the associated images. **Due to file system structure the example might work only on OSX and Linux systems, although it should really easy to adapt to Windows.**
+Basically it's a little 'Web Scrapper'
+
+I am currently working on a project and I need a considerable amount of products to test the environment, etc... I didn't found any fake data server or similar, and adding this elements one by one it might take a lot of time. And what is better than fake data? **Real Data**
+
+The python script generates a list of articles based on a keyword, and optionally can download the associated images. **Due to file system structure the example might work only on OSX and Linux systems, although it should really easy to adapt to Windows.**
+
+### Installation
+
+You only have to clone the repository, create a virtual environment and install [pyquery](http://pyquery.readthedocs.org/en/latest/)
 
 ### How to use
 
@@ -122,7 +130,7 @@ The name of the folder is the Amazon Product ID
 ### Version
 0.1.0
 
-### More Info
+### Contact Info
 * [twitter](https://twitter.com/xaviercolomer)
 * [linkedin](https://es.linkedin.com/in/xaviercolomer)
 * [blog](http://xavicolomer.com)
