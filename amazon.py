@@ -40,9 +40,10 @@ def getProductDetail(aid, link, path):
         images = re.findall(regex, query.html().encode('utf-8').strip())
         details['images'] = json.loads(images[0][1])
 
-        for image in details['images']:
-            for variant in details['images'][image]:
-                downloadImage(path + '/' + image, variant['hiRes'].rsplit('/', 1)[1], variant['hiRes'], False)
+        if (path):
+            for image in details['images']:
+                for variant in details['images'][image]:
+                    downloadImage(path + '/' + image, variant['hiRes'].rsplit('/', 1)[1], variant['hiRes'], False)
         
     except:
         print 'No images found'
@@ -83,6 +84,7 @@ def getProductInfo(keyword, page, download):
         link = settings.AMAZON_URL.format(keyword, str(page))
         query = pq(url=link)
         results = query('li').filter('.s-result-item')
+        path = None
 
         for result in results:
             try:
@@ -96,9 +98,9 @@ def getProductInfo(keyword, page, download):
                 article['title'] = myTitle
 
                 article['thumbnail'] = articleQuery('img').filter('.s-access-image').attr["src"]
-                path = download + '/' + article['amazonID']
 
                 if (download):
+                    path = download + '/' + article['amazonID']
                     downloadImage(path, article['thumbnail'].rsplit('/', 1)[1], article['thumbnail'])
                     
                 article['url'] = articleQuery('a').filter('.s-access-detail-page').attr["href"]
