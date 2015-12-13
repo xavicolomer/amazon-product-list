@@ -113,6 +113,12 @@ python amazon.py -k jersey -p 2 -o ~/Desktop/products.json -d images
 },
 ```
 
+### Example Image Download with all Variants
+
+The name of the folder is the Amazon Product ID
+
+![screen shot 2015-12-13 at 01 50 16](https://cloud.githubusercontent.com/assets/1476272/11764723/ed7a1712-a13b-11e5-9f95-ef09d69a7062.png)
+
 ### Version
 0.1.0
 
