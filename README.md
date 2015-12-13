@@ -1,6 +1,6 @@
 # Amazon product JSON list 
 
-A python script that generates a list of articles based on a keyword, and optionally can download the associated images.
+A python script that generates a list of articles based on a keyword, and optionally can download the associated images. **Due to file system structure the example might work only on OSX and Linux systems, although it should really easy to adapt to Windows.**
 
 ### How to use
 
